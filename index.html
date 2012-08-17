@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="resources/images/icon@2x.png"/>
+	<link rel="apple-touch-startup-image" href="resources/images/splash.png" />
+	<title>Frameworks y buenas prácticas</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400&amp;subset=latin" media="all" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+	<link rel="stylesheet" href="kinout/stylesheets/css/reset.css">
+	<link rel="stylesheet" href="kinout/stylesheets/css/layout.css">
+	<link rel="stylesheet" href="kinout/stylesheets/css/widgets.css">
+	<link rel="stylesheet" href="assets/lib/highlight/styles/googlecode.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+	<div class="kinout">
+
+		<section>
+			<article>
+				<h1>Frameworks y buenas prácticas</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Acerca de mí</h2>
+				<p class="vertical">
+					<img src="assets/images/real-me-blog.jpg" class="bordered size_256 center image-shadow">
+				</p>
+				<p class="vertical">Mi nombre es Jesús Manuel Olivas</p>
+				<p class="vertical">Me pueden encontrar en twitter como <strong>@jmolivas</strong><br/>
+				En mi blog http://jmolivas.com</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Quién se considera ?</h2>
+				<p>
+					<div class="half">
+						<img src="assets/images/php-developer.jpg" class="bordered center image-shadow">
+						<p>Desarrollador PHP</p>
+					</div>
+					<div class="half">
+						<img src="assets/images/php-framework-developer.jpg" class="bordered center image-shadow">
+						<p>Desarrollador PHP + Framework</p>
+					</div>
+				</p>
+			</article>
+		</section>
+
+
+		<section>
+			<article>
+				<h1>Frameworks</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Que es un Framework?</h2>
+				<p class="left ">
+			 		Pensemos en un framework (marco de trabajo) como una caja de legos esas que teniamos cuando niños con ellos podiamos construir casi cualquier cosa uniendo las diferentes piezas.<br/><br/>
+			 		Recordemos que no todas las piezas eran iguales algunas tenían funcionalidades específicas, estas pueden ser los diferentes módulos, plugins, gemas o bundles.
+		 		</p>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Por que utlizar un Framework ?</h2>
+				<p>
+					<ul>
+						<li class=" left">Un framework no es una necesidad absoluta, pero sin embargo es muy útil.<br/><br/></li>
+						<li class=" left">Un framework (core/núcleo) es una garantía de calidad, capacidad de actualización y mantenimiento de aplicaciones a un costo menor.<br/><br/></li>
+						<li class=" left">Las aplicaciones desarrolladas utilizando un framework cumplen con de los estándares del mercado.</li>
+					</ul>
+				</p>
+		 	</article>
+		</section>	
+
+		<section>			
+			<article>
+				<h2>Construye tus aplicaciones no tus herramientas</h2>
+				<p class=" left">
+					Este es el principio básico de todo framework: no tener que reinventar la rueda.
+				</p>
+				<p class=" left">
+					Además de la eliminación de malas prácticas y tareas de bajo valor agregado, por ejemplo, el desarrollo de componentes genéricos con el fin de centrarse totalmente en las reglas de negocio.
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h1>Symfony2</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Que es Symfony ?</h2>
+				<p>
+					<ul class="left">
+						<li>Un conjunto de clases Orientadas a Objetos compatibles con PHP 5.3 y versiones posteriores.<br/><br/></li>
+						<li>Un conjunto de componentes reutilizables de manera independiente y cohesionada que solucionan problemas comunes de desarrollo web.<br/><br/></li>
+						<li>Es un framework de desarrollo en PHP que puede ser utilizado bajo el patrón Modelo Vista Controlador (MVC).</li>
+					</ul>
+				</P>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Origen</h2>
+				<p class="left">
+					<div class="half">
+						<ul class="left">
+							<li>Fundador - Fabien Potencier</li>
+							<li>Desarrollado y mantenido principalmente por la empresa Sensio Labs en Francia en el 2005.</li>
+						</ul>
+					</div>
+					<div class="half">
+						<img src="assets/images/fabien-potencier.jpg" class="bordered center image-shadow"><br/>
+					</div>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Symfony2 según Fabien Potencier</h2>
+				<p class="vertical">
+					"Symfony2 no es un framework MVC. Symfony2 sólo proporciona herramientas para la parte del Controlador y de la Vista. La parte del Modelo es responsabilidad tuya, aunque existen librerías para integrar fácilmente los ORM más conocidos, como Doctrine y Propel".
+					<br/><br/>
+					<a href="http://fabien.potencier.org/article/49/what-is-symfony2">
+						http://fabien.potencier.org/article/49/what-is-symfony2
+					</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Modelo Vista Controlador (MVC)</h2>
+				<p class="small left">
+					Es un patrón de arquitectura de software que separa los datos de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.
+		 		</p>
+				<ul>
+					<li class="left small"><h4>Modelo:</h4>Esta es la representación específica de la información con la cual el sistema opera.</li>
+					<li class="left small"><h4>Vista:</h4> Este presenta el modelo en un formato adecuado para interactuar, usualmente la interfaz de usuario.</li>
+					<li class="left small"><h4>Controlador:</h4> Este responde a eventos, usualmente acciones del usuario e invoca peticiones al modelo y en ocaciones envia datos a la vista.</li>
+				</ul>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Capas del modelo MVC</h2>
+				<p>
+					<img src="assets/images/mvc.png" class="bordered center image-shadow"><br/>
+				</p>
+		 	</article>
+		</section>
+				
+		<section>
+			<article>
+				<h2>Por que Symfony2 ?</h2>
+				<p>
+					<ul>
+						<li class="left small"><h4>Reputación:</h4>Es un proyecto estable y reconocido, con una comunidad muy activa.</li>
+						<li class="left small"><h4>Permanencia</h4>El proyecto esta en la version 2.0.x y empezó desde el 2005.</li>
+						<li class="left small"><h4>Referencias</h4> Varios proyectos y empresas importantes lo estan utilizado Yahoo, Dailymotion, Opensky, Drupal 8, Behat, Doctrine, Propel, PHP Unit, Jackalope, Silex, PPI 2, Easybook, MIdgard CMS, Zikula (antes PostNuke), phpBB</li>
+						<li class="left small"><h4>Innovación</h4>Symfony2 fue creado tomando en cuenta las mejores prácticas existentes del mercado actualmente, tomando ideas de proyectos RoR, Java, Python.</li>
+					</ul>
+				</p>	
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Linea de tiempo</h2>
+				<p>
+					<img src="assets/images/timeline.png" class="bordered center image-shadow">
+				</p>	
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Una comunidad activa</h2>
+				<p>
+					<img src="assets/images/community.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Es el único, solo existe Symfony ?</h2>
+				<p>
+					<img src="assets/images/php-frameworks.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Y en donde esta la diferencia ?</h2>
+				<p>
+					<img src="assets/images/php-frameworks-differences.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Que piezas trae la caja</h2>
+				<p>
+					<img src="assets/images/components-symfony.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Y Silex es igual ?</h2>
+				<p>
+					<img src="assets/images/components-silex.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Que beneficios nos brinda</h2>
+				<p class="left">
+					<div class="half">
+						<ul>
+					        <li class="left ">Persistencia datos</li>
+					        <li class="left ">Seguridad</li>
+					        <li class="left ">Formularios</li>
+					        <li class="left ">Validación</li>
+					        <li class="left ">Plantillas</li>
+					        <li class="left ">Archivos de log</li>
+						</ul>
+					</div>
+					<div class="half">
+						<ul >
+					        <li class="left ">Rendimiento</li>
+					        <li class="left ">Cache</li>
+					        <li class="left ">Archivos web</li>
+					        <li class="left ">Internacionalización</li>
+					        <li class="left ">Tareas programadas</li>
+					        <li class="left ">Enrutamiento </li>
+						</ul>
+					</div>
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Cuales son las buenas prácticas ?</h2>
+				<p>
+					<img src="assets/images/best-practices.png" class="bordered center image-shadow">
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Hibernate</h2>
+				<img src="assets/images/hibernate-top.png" class="bordered center image-shadow"><br/>
+				<img src="assets/images/hibernate-bottom.png" class="bordered center image-shadow"><br/>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ruby</h2>
+				<img src="assets/images/ruby-top.png" class="bordered center image-shadow"><br/>
+				<img src="assets/images/ruby-bottom.png" class="bordered center image-shadow"><br/>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Django</h2>
+				<img src="assets/images/django-top.png" class="bordered center image-shadow"><br/>
+				<img src="assets/images/django-bottom.png" class="bordered center image-shadow"><br/>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Flexibilidad</h2>
+				<p class="left">
+					<ul >
+				        <li class="left ">Configuración PHP, XML, *YAML<br/><br/></li>
+				        <li class="left ">Plantillas PHP, *Twig<br/><br/></li>
+				        <li class="left ">Almacenamiento SQL, NoSQL<br/><br/></li>
+				        <li class="left ">Flujo de trabajo (rutas) *Anotaciones, Archivos</li>
+					</ul>
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Rendimiento</h2>
+				<p>
+					<img src="assets/images/performance.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Cache Reverse Proxy</h2>
+				<p>
+					<img src="assets/images/cache.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Algunos comandos consola Symfony2</h2>
+				<pre>
+					<code>
+						$app/console doctrine:database:create
+
+						$app/console doctrine:schema:create
+
+						$app/console doctrine:schema:update --force
+
+						$app/console generate:bundle
+
+						$app/console doctrine:generate:entity
+
+						$app/console doctrine:generate:form
+
+						$app/console doctrine:generate:crud
+
+						$app/console cache:clear 
+
+						$app/console router:debug
+
+						$app/console assets:install web --symlink
+					</code>
+				</pre>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h1>Frameworks para necesidades específicas.</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h1>Drupal</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Que es Drupal ?</h2>
+				<div class="half">
+					<p class="left small">
+						Drupal es un programa escrito en PHP, con licencia GNU/GPL, que se utiliza como sistema base de sitios y aplicaciones web.<br/><br/>
+						Su flexibilidad lo hace que sea adecuado para realizar diferentes tipos de sitios y aplicaciones.<br/><br/>
+						<ul class="left small">
+							<li>CMS (Content Management System)</li>
+							<li>CMF (Content Management Framework)</li>
+						</ul>
+					</p>
+				</div>
+				<div class="half">
+					<br/>
+					<p class="vertical">
+						<div class="center">
+							<img src="assets/images/drupal-logo.png" class="bordered center image-shadow">
+						</div>
+					</p>
+					<br/>
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Origen</h2>
+				<p class="left">
+					<div class="half">
+						<ul class="left">
+							<li>Fundador - Dries Buytaert </li>
+							<li>Código fuente abierto en 2001.</li>
+							<li>Drupal es el equivalente fonético en inglés a la palabra neerlandesa druppel que significa 'gota'.</li>
+						</ul>
+					</div>
+					<div class="half">
+						<img src="assets/images/dries.jpg" class="bordered center image-shadow"><br/>
+					</div>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Perfiles de instalación</h2>
+				<img src="assets/images/installation-profiles.png" class="bordered center image-shadow">
+				<p class="certical">
+					<a href="http://drupal.org/project/installation+profiles" target="_blank">http://drupal.org/project/installation+profiles</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Personalizado</h2>
+				<p>Instalación, configuración y/o creación de módulos.</p>
+				<img src="assets/images/drupalego.jpg" class="bordered center image-shadow">	
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>960gs</h2>
+				<p>
+					<img src="assets/images/960gs.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>	
+
+		<section>
+			<article>
+				<h2>¿ Qué es y como funciona un sistema de grid como 960 ?</h2>
+				<p class="left small">
+					Un CSS Grid Framework es una herramienta que nos facilita el maquetado y el desarrollo de un sitio web al proveernos una guía sobre la cual trabajar. 
+				</p>
+				<p class="left small">
+					Esta guía consiste en un sistema de columnas, espacios y márgenes que nos ayudan a posicionar los bloques de contenido de nuestro diseño de manera rápida y organizada.<br/><br/>
+				</p>
+				<a href="http://960.gs">http://960.gs</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ejemplo sitio Drupal.org</h2>
+				<img src="assets/images/drupal-nogrid.png" class="bordered center image-shadow">
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ejemplo sitio Drupal.org (grid 960)</h2>
+				<img src="assets/images/drupal-grid960.png" class="bordered center image-shadow">
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>jQuery</h2>
+				<p>
+					<img src="assets/images/jquery.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2> ¿Qué es jQuery?</h2>
+				<p class="left">
+					jQuery es una librería de JavaScript que permite simplificar la manera de interactuar con los documentos HTML, manipular el árbol DOM (Document Object Model), manejar eventos, desarrollar animaciones y realizar peticiones AJAX a páginas web.<br/><br/>
+					Creada inicialmente por John Resig. Presentada el 14 de enero de 2006 en el BarCamp NYC.<br/><br/>
+				</p>
+				<p>
+					<a href="http://jquery.com">http://jquery.com</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Funcionalidad del núcleo</h2>
+				<p class="left">
+					<ul class="left">
+						<li>Selectores</li>
+						<li>Manipulación de atributos y CSS</li>
+						<li>Iteración de elementos</li>
+						<li>Manejo e Invocación de eventos</li>
+						<li>Animación y Efectos</li>
+						<li>Llamados o interacciones con AJAX</li>
+					</ul>
+				</p>
+				&nbsp;
+				<p class="vertical">
+					<a href="http://librojquery.com/">http://librojquery.com</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ejemplos de jQuery</h2>
+				<pre>
+					<code>
+						$(':text'); 
+						$(':checkbox');
+						$('div'); 
+						$('#id');
+						$('.classname') 
+						$('div.classname', '#id');
+
+						$('input.editable', 'form').each(function(i) {
+							$(this).attr('required','required');
+						});
+
+						$('.btn').delegate('click',function() {
+							$.ajax({
+								url: 'load-file.php',
+								success : function(data, textStatus, jqXHR){
+									$('.wrapper').html(data);
+								}
+							});
+						});
+					</code>
+	  			</pre>
+	  		</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>JavaScript frameworks </h2>
+				<p>
+					<h4>MV* (MVC/MVVM)</h4>
+					<ul class="left">
+						<li>Backbone</li>
+						<li>Ember</li>
+						<li>Spine</li>
+						<li>AngularJS</li>
+						<li>Dojo</li>
+						<li>Batman</li>
+						<li>YUI</li>
+					</ul>
+					<a href="http://todomvc.com">http://todomvc.com</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>SCRUM (Metodología ágil)</h2>
+				<p class="left small">
+					Scrum más que una metodología es un framework para la gestión de proyectos. Se basa principalmente en la premisa de ejecutar un proyecto en iteraciones de entre dos y cuatro semanas, llamadas Sprints, y de duración fija (timebox). Esto quiere decir que las fechas de finalización de cada iteración no pueden ser pospuestas.
+				</p>
+				<p class="left small">
+					<h4 class="left">Valores del manifiesto Agil</h4>
+					<ul class="left small">
+						<li>Valorar a las personas y las interacciones entre ellas por sobre los procesos y herramientas.</li>
+						<li>Valorar el software funcionando por sobre la documentación detallada.</li>
+						<li>Valorar la colaboración con el cliente por sobre la negociación de contratos.</li>
+						<li>Valorar la respuesta a los cambios por sobre el seguimiento estricto de los planes.</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>SCRUM ... continuación</h2>
+				<p>
+					<ul class="left small">
+						<li>Falla rápido, falla en repetidas ocaciones y falla en público.</li>
+						<li>Si la primera versión de tu producto no te hace sentir avergonzado significa que demoraste demasiado tiempo en liberlo.</li>
+						<li>El software perfecto solo existe en la mente del desarrollador.</li>
+						<li>Si agrega valor al producto puede ser considerado una tarea.</li>
+						<li>Todos los problemas emergerán y se volverán visibles a medida que avancemos en los proyectos</li>
+						<li>Cuando permitimos que las soluciones emerjan estamos frente a la solución más simple y apropiada para el contexto actual.</li>
+						<li>No podemos imaginar el sistema completo de una vez y todo junto.</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h1>Buenas prácticas.</h1>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Respeta estandares de codificación</h2>
+				<p>
+					Propuesta y estándares de código recomendados establecido por el PHP Framework Interoperability Group
+				</p>
+				<p>
+					<ul class="left small">
+						<li>Nate Abele: Lithium</li>
+						<li>Guilherme Blanco: Doctrine, Doctrine2</li>
+						<li>Jordi Boggiano: Composer, Packagist</li>
+						<li>William Durand: Propel, Propel 2</li>
+						<li>Andrew Eddie: Joomla</li>
+						<li>Larry Garfield: Drupal</li>
+						<li>Fabien Potencier: Symfony, Symfony2</li>
+					</ul>
+				</p>
+				<p>
+					<a href="https://github.com/php-fig/fig-standards/tree/master/accepted">Estandares PHP-FIG</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Conforma un equipo multidisciplinario.</h2>
+				<p class="vertical">
+						<img src="assets/images/team.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Administra tu tiempo.</h2>
+				<div class="half">
+					<p class="left">Utiliza la técnica del Pomodoro para manejar el tiempo que dedicas a tus tareas y  evitar interrupciones.<br/></p>
+					<p class="left">
+						<ul class="left smal">
+							<li>25 min de trabajo por 5 de descanso.</li>
+							<li>Un descanso largo de 15/20 minutos por cada 4 pomodoros.</li>
+						</ul>
+					</p>
+				</div>
+				<div class="half">
+					<br/>
+					<p class="vertical">
+						<img src="assets/images/pomodoro_timer.jpg" class="bordered center image-shadow">
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ambiente de desarrollo === producción</h2>
+				<p>Como desarrolladores con frecuencia nos encontraremos con que nuestro entorno de desarrollo es muy distinto del entorno de producción.</p>
+				<p>Es importante contar con un ambiente de desarrollo el cual sea una réplica ó al menos con características y  muy similares al ambiente de producción.</p>
+				<p>Utiliza una VM (Virtual Machine/Maquina Virtual)</p>
+				<a href="http://virtualbox.org">VirtualBox</a>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Vagrant (Adminstrador de VM)</h2>
+				<p>
+					<h6 class="left">*Requiere Ruby</h6><br/>
+				</p>
+				<pre>
+					<code>
+						$gem install vagrant
+
+						$vagrant box add {title} {url}
+
+						$vagrant init {title}
+
+						$vagrant up
+
+						$vagrant ssh
+
+						$vagrant status
+					</code>
+				</pre>
+
+				<p>
+					<a href="http://www.vagrantbox.es">Vagrant</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Utiliza un repositorio para el código.</h2>
+				<pre>
+					<code>
+						$git init
+						$git clone						
+						$git pull
+
+						/* hack, hack, hack, code, code, code */
+
+						$git add .
+						$git commit -m 'TAG/ISSUE #: Que cambio...'
+						$git pull
+						$git rebase
+
+						/* conflictos */
+
+						$git add .
+						$git rebase --continue
+
+						$git push
+					</code>
+				</pre>
+				<a href="http://rogerdudler.github.com/git-guide/index.es.html">
+					git - la guía sencilla
+				</a>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Aprende git en 15 minutos en-linea.</h2>
+				<p>
+					<img src="assets/images/code-school-try-git.png" class="bordered center image-shadow">
+				</p>
+				<p>
+					<a href="http://try.github.com/">http://try.github.com</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Conoce tus herramientas.</h2>
+				<p class="vertical">
+					Dedica un tiempo para explorar y conocer mejor tus herramientas de desarrollo. Eclipse, Sublime Text, Vim, PHPStorm, Netbeans, NotePad++.
+				</p>
+				<p class="vertical">
+					Investiga los "Shortcut keys" o combinaciones de teclas y prácticalas.<br/><br/>
+				</p>
+				<pre>
+					<code>
+						⌘/		/* Comentar codigo */
+						⌘X		/* Cortar linea */
+						⌘↵ 		/* Insert linea */
+						⌘⇧↵		/* Insert linea antes */
+						⌃M		/* Mover hasta el siguiente ( ) { } */
+					</code>
+				</pre>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Genera memoria muscular.</h2>
+				<p>
+					<img src="assets/images/editors-shortcut.png" class="bordered center image-shadow">
+				</p>
+				<p>
+					<a href="http://www.shortcutfoo.com/">http://www.shortcutfoo.com</a>
+				</p>	
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Busca y prueba nuevas tecnologías</h2>
+				<p class="vertical">
+					<img src="assets/images/html5-and-css3.jpg" class="bordered center image-shadow">
+				</p>
+				<p class="vertical">
+					<img src="assets/images/coffescript.png" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>HTML5</h2>
+				<p class="left">
+					HMTL5 no es una sola cosa o una tecnología monolítica. Se trata de un conjunto de características, tecnologías y un API que brindan el poder del escritorio y la interactividad de la experiencia multimedia de la web.<br/>
+				</p>
+				<p class="left">
+					HTML5 incluye la quinta revisión del lenguaje de marcado HTML, CSS 3, y una serie de APIs de JavaScript. Juntas, estas tecnologías permiten crear aplicaciones complejas que antes podían ser creados únicamente para plataformas de escritorio.<br/><br/>
+				</p>
+				<p><a href="http://www.html5rocks.com/">HTML5Rocks</a> | <a href="http://diveintohtml5.info/">Dive into HTML5</a></p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>La web es semántica</h2>
+				<p>
+					<h4>El contenido tiene significado</h4>
+					<p>
+						<pre>
+							<code>
+								&lt;article&gt;
+									&nbsp; &lt;header&gt;
+									&nbsp; &nbsp; &lt;h1&gt;&lt;/h1&gt;
+									&nbsp; &lt;/header&gt;
+									&nbsp; &lt;section&gt;
+									&nbsp; &nbsp; &lt;div class="grid-4"&gt;&lt;/div&gt;
+									&nbsp; &nbsp; &lt;div class="grid-4"&gt;&lt;/div&gt;
+									&nbsp; &lt;/section&gt;
+									&nbsp; &lt;footer&gt;
+									&nbsp; &lt;/footer&gt;
+								&lt;/article&gt;
+							</code>
+						</pre>
+					</p>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Preprocesadores de CSS</h2>
+				<p>Escribir CSS no es igual a cualquier lenguaje de programación.</p>
+				<ul class="left">
+					<li>No existen variables.</li>
+					<li>No se pueden hacer operaciones lógicas entre valores.</li>
+					<li>No posee flujos de control.</li>
+					<li>Esto es porque CSS es un Lenguaje de estilos.</li>
+					<li>Necesitamos sitios mejor optimizados, más ligeros, con mejores experiencias del usuario</li>
+					<li>Diseños dinámicos que cambian radicalmente por el tamaño de la pantalla e incluso por el tipo de dispositivo.</li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Ejemplo scss => css.</h2>
+				<pre>
+					<code class="small">
+						/* scss */
+						#v-gradient {
+						   @include background-image(linear-gradient(#ffffff,
+						   #cccccc, #aaaaaa));
+						}
+
+						/* CSS */
+						 #v-gradient {
+						   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, 
+						   color-stop (0%, #ffffff), color-stop(50%, #cccccc), 
+						   color-stop(100%, #aaaaaa));
+						   background-image: -webkit-linear-gradient(#ffffff, #cccccc, #aaaaaa);
+						   background-image: -moz-linear-gradient(#ffffff, #cccccc, #aaaaaa);
+						   background-image: -o-linear-gradient(#ffffff, #cccccc, #aaaaaa);
+						   background-image: -ms-linear-gradient(#ffffff, #cccccc, #aaaaaa);
+						   background-image: linear-gradient(#ffffff, #cccccc, #aaaaaa);
+						}
+					</code>
+				</pre>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>CoffeeScript</h2>
+				<p class="vertical">
+					CoffeeScript es un lenguaje de programación que compila en JavaScript. Si conoces JavaScript no te costará trabajo aprender CoffeeScript y probablemente agradecerás lo elegante y simple de su sintáxis, la cual se inspira mucho en Ruby o Python.<br/><br/>
+				</p>
+				<pre>
+					<code>
+						$npm install -g coffee-script
+					</code>
+				</pre>
+				<p>
+					<br/>
+					<a href="http://coffeescript.org">http://coffeescript.org</a>
+				<p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Aprende y prueba CoffeeScript</h2>
+				<img src="assets/images/js2coffee.png" class="bordered center image-shadow">
+				<p class="vertical">
+					<a href="http://js2coffee.org/">http://js2coffee.org</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Interfaz visual.</h2>
+				<p>
+					<div class="half">
+						<ul class="left">
+							<li><a href="http://jqueryui.com">jQuery UI</a></li>
+							<li><a href="http://taitems.github.com/Aristo-jQuery-UI-Theme/">Aristo</a></li>
+							<li><a href="http://formalize.me">Formalize</a></li>
+							<li><a href="http://uniformjs.com">UniformJS</a></li>
+							<li><a href="http://modernizr.com/">Modernizr</a></li>
+						</ul>
+					</div>
+					<div class="half">
+						<ul class="left">
+							<li><a href="http://www.google.com/webfonts">Webfonts</a></li>
+							<li><a href="http://html5boilerplate.com/">Boilerplate</a></li>
+							<li><a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a></li>
+							<li><a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome (icon font)</a></li>
+							<li><a href="http://foundation.zurb.com">Fundation</a></li>
+						</ul>
+					</div>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Twitter bootstrap.</h2>				
+					<img src="assets/images/twitter-bootstrap.png" class="bordered center image-shadow">
+				<p class="vertical">
+					<a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a> | 
+					<a href="http://bootswatch.com/">Temas para Twitter bootstrap</a>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Atiende a todos los dispositivos.</h2>
+				<p class="vertical">
+					<img src="assets/images/palantir.jpg" class="bordered center image-shadow">
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>¿ Qué es diseño responsivo ?</h2>
+			<article>
+				<p class="left small">Se define como Diseño Responsivo Web o por sus siglas en ingles RWD (Responsive Web Design).</p>
+				<p class="left small">Una forma de desarrollar sitios web asegurando, que el diseño está optimizado para que el formato se ajuste en relación al tamaño de la pantalla del dispositivo mediante el uso de las siguientes técnicas:<br/><br/></p>
+				<ul class="left">
+					<li class="left small">Un grid flexible como 960gs + AdaptJS.</li>
+					<li class="left small">Imágenes flexibles/adaptivas, que se ajustan a un contexto fluido.</li>
+					<li class="left small">CSS3 Media queries, que optimizan el diseño para diferentes contextos.</li>
+				</ul>	
+			</article>
+		</section>
+
+		<section>
+			<h2> ¿ Imagenes flexibles ó adaptivas ?</h2>
+			<article>
+				<p class="left small">Es una práctica común definir instrucciones en las propiedades de clases dentro de las hojas de estilo para ajustar las imagenes en relación al tamaño del contenedor.
+				</p>
+				<p><a href="http://filamentgroup.com/examples/responsive-images">http://filamentgroup.com/examples/responsive-images</a><br/><br/></p>
+				<p class="left small">Es importante servir las imágenes adecuadas en relación al tamaño del dispositivo que esta consultado el sitio, regularmente la velocidad de coneccion en los dispositivos móviles es menor.
+				</p>
+				<p><a href="http://adaptive-images.com">http://adaptive-images.com</a></p>
+			</article>
+		</section>
+
+		<section>			
+			<article>
+				<h2>CSS3 Media queries</h2>
+				<p>Son instrucciones condicionantes para determinar que hoja de estilo ó cuales clases dentro de esta seran las que se utilizen.
+				</p>
+				<p>
+					<pre>
+						<code>
+							&lt;link rel="stylesheet" href="style.css" 
+							media="(min-width: 960px)"&gt;
+						</code>
+					</pre>
+					<br/>
+					<pre>	
+						<code> 
+							@media screen and (min-width: 960px) { 
+								// definición de clases y atributos.
+							}
+						</code>
+					</pre>
+				</p>
+			</article>
+		</section>	
+
+		<section>
+			<h2>Breakpoints</h2>
+			<article>
+				<p class="small">
+					<ul>
+						<li class="left small"> 
+						0-519 pixels: La mayoría de los telefonos en formato landspace, se podría ajustar el formato portrait con un ancho fluido CSS.
+						</li>
+						<li class="left small"> 
+						520-759 pixels: Teléfonos con pantallas amplias y resoluciones altas en formato landspace ó Tablets con resoluciones bajas o pantallas pequeñas en formato portrait.
+						</li>
+						<li class="left small"> 
+						760-959 pixels: La mayoria de Tablets en formato landspace.
+						</li>
+						<li class="left small">
+						960-1279 pixels: Tablets con pantallas alta definición, computadoras portatiles "laptops" y dispositivos de escritorio "desktop".
+						</li>
+						<li class="left small">
+						1280+: Monitores grandes o con resoluciones altas y televisiones inteligentes "Smart TV".
+						</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>¿ Cuando es necesario pensar en diseño responsivo ?</h2>
+				<p>
+					<ul>
+						<li class="left small">Estas pensando rediseñar o iniciar un sitio desde cero. Es necesario establecer esto al momento de elegir el framework base sobre el cual se implementará el sitio.</li>
+						<li class="left small">Quieres reducir costos de implementación y mantenimiento. Es mas caro mantener una versión móvil del sitio ya que practicamente existe la necesidad de mantener dos sitios por separado. En el caso de un sitio responsivo se comprate  código.</li>
+						<li class="left small">Quieres soportar nuevos dispositivos cuando estos aparezcan en el mercado.</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>			
+			<article>
+				<h2>Optimiza el desempeño del sitio</h2>
+				<p class="small">
+					<ul>
+						<li class="left">Evita los redirecionamientos.</li>
+						<li class="left">Evita el excesivo uso de etiquetas anidadas (div-itis, div-ception).</li>
+						<li class="left">Utiliza etiquetas de HTML5 (article, aside, section).</li>
+						<li class="left">Utiliza CSS sprites para servir múltiples imágenes.</li>
+						<li class="left">Consolida archivos de CSS & Javascript en uno solo.</li>
+						<li class="left">Reduci dependencias en librerias de Javascript muy pesadas.</li>
+						<li class="left">Utiliza un CDN.</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>CDN (Content Delivery Network).</h2>
+				<p class="left">
+					Si utilizamos un CDN externo podríamos ahorrar tráfico en nuestros servidores y evitar que el usuario tenga que descargar la misma librería JS que habrá usado en otros sitios y ya probablemente tenía cacheada.<br/><br/>
+				</p>
+				<p>
+					<h3 class="left">Beneficios</h3>
+					<ul class="left">
+						<li>Mejora de latencia</li>
+						<li>Reduce el número de peticiones al servidor</li>
+						<li>Uliza caché</li>
+					</ul>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Proveedores de librerias</h2>
+
+				<p>
+					<a href="https://developers.google.com/speed/libraries/devguide">Google Hosted Libraries</a>
+				</p>
+
+				<p>				
+					<a href="http://www.asp.net/ajaxlibrary/cdn.ashx">Microsoft CDN</a>
+				</p>
+
+				<p>
+					<a href="http://code.jquery.com/">jQuery CDN</a>
+				</p>
+
+				<p>
+					<a href="http://cdnjs.com/">CDNJS</a>
+				</p>
+
+				<p>
+					<pre>
+						<code class="small">
+							&lt;script type="http://code.jquery.com/jquery-1.7.2.min.js"&gt;&lt;/script&gt; &nbsp;
+						</code>
+					</pre>
+				</p>
+
+			</article>
+		</section>			
+
+		<section>
+			<article>
+				<h2>Algunos proyectos de interés</h2>
+				<p>
+					<div class="half">
+						<ul class="left">
+							<li><a href="http://basecamp.com/">Basecamp</a></li>
+							<li><a href="https://app.asana.com/">Asana</a></li>
+							<li><a href="https://podio.com/">Podio</a></li>
+							<li><a href="https://github.com/">Github</a></li>
+							<li><a href="https://bitbucket.org/">Bitbucket</a></li>
+							<li><a href="http://phonegap.com/">PhoneGap</a></li>
+							<li><a href="http://mulberry.toura.com/">Mulberry</a></li>
+							<li><a href="http://www.lungojs.com/">LungoJS</a></li>
+						</ul>
+					</div>
+					<div class="half">
+						<ul class="left">
+							<li><a href="http://www.taffydb.com/">TaffyDB</a></li>
+							<li><a href="http://underscorejs.org/">Undescore</a></li>
+							<li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Validation</a></li>
+							<li><a href="http://raphaeljs.com/">Raphael</a></li>
+							<li><a href="http://www.yoxigen.com/yoxview/">YoxView</a></li>
+							<li><a href="http://caroufredsel.frebsite.nl/">CarouFredSel</a></li>
+							<li><a href="https://github.com/mleibman/SlickGrid/">SlickGrid</a></li>
+							<li><a href="http://datatables.net/">DataTables</a></li>
+						</ul>
+					</div>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>El síndrome NIH</h2>
+				<p class="left">
+						Término usado para describir el comportamiento o la aversión que evita el uso de proyectos ya existentes a causa de sus orígenes externos.<br/><br/>
+				</p>
+				<ul>
+					<li class="left ">
+						Re-creación de las características existentes del lenguaje utilizado.<br/><br/>
+					</li>
+					<li class="left ">
+						Re-creación de código y funcionalidad de otros proyectos de código abierto establecidos.<br/><br/>
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Busca antes de escribir código.</h2>
+				<p class="left ">
+					Es fácil ser víctima del síndrome NIH (Not Invented Here / No inventado aquí) y pensar en escribir código para cada una de nuestras necesidades.<br/><br/>
+				</p>
+				<ul>
+					<li class="left ">RTFM : Lee el maldito manual</li>
+					<li class="left ">Google</li>	
+					<li class="left ">IRC canal oficial del proyecto</li>
+					<li class="left ">Red de contactos.</li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>Para finalizar.</h2>
+				<div class="half">
+					<p class="left">
+						<br/>Programar es como las artes marciales. Puedes patear el trasero de cualquiera, pero tienes que contar con la disciplina necesaria para utilizar la violencia solo en caso de ser necesario.</p>
+				</div>
+				<div class="half">
+					<p class="vertical">
+						<img src="assets/images/ninjago.jpg" class="bordered center image-shadow">
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2 class="medium"> Referencias</h2>
+				<p class="left small ">
+					Slides hechas con kinout<br/>
+					<a href="http://github.com/soyjavi/kinout">kinout on github</a>
+				</p>
+				<p class="left small ">
+					Tipografías utlizadas Bitter & Open Sans<br/>
+					<a href="http://www.google.com/webfonts/specimen/Bitter">Open Sans en google webfont directory</a><br/>
+					<a href="http://www.google.com/webfonts/specimen/Open+Sans">Bitter en google webfont directory</a><br/>
+				</p>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2 class="medium"> Agradecimientos </h2>
+				<p class="vertical">
+					<img src="assets/images/real-me-blog.jpg" class="bordered size_256 center image-shadow">
+				</p>
+				<p>Frameworks y buenas prácticas - Agosto 2012</p>
+				<p class="vertical">Jesús Manuel Olivas | @jmolivas | http://jmolivas.com</p>
+			</article>
+		</section>
+	</div>
+
+	<script src="kinout/javascripts/Kinout.js"></script>
+	<script src="kinout/javascripts/Kinout.Core.js"></script>
+	<script src="kinout/javascripts/Kinout.Dom.js"></script>
+	<script src="kinout/javascripts/Kinout.Router.js"></script>
+	<script src="kinout/javascripts/Kinout.Events.js"></script>
+	<script src="kinout/javascripts/Kinout.Url.js"></script>
+	<script src="kinout/javascripts/Kinout.View.js"></script>
+
+	<script>
+		KINOUT.Core.init({ template: 'circle' });
+	</script>
+
+	<script src="assets/lib/highlight/highlight.pack.js"></script>
+
+	<script type="text/javascript">
+		hljs.tabReplace = ' ';
+		//hljs.tabReplace = '<span class="indent">\t</span>';
+  		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+</html>
